@@ -1,0 +1,322 @@
+{
+  "es": {
+    "subtitle": "DevOps | Automatización & Infraestructura como Código",
+    "nav": {
+      "about": "./about.sh",
+      "experience": "./experience.sh",
+      "skills": "./skills.sh",
+      "technologies": "./tech-stack.sh",
+      "contact": "./contact.sh"
+    },
+    "about": {
+      "title": "cat about.txt",
+      "p1": "Soy un DevOps apasionado por la automatización, la mejora continua y la cultura colaborativa. Mi objetivo es construir pipelines de CI/CD eficientes, optimizar infraestructuras y facilitar la entrega de software de alta calidad de manera ágil y confiable.",
+      "p2": "Me especializo en infraestructura como código y API Managers, con experiencia en herramientas como Terraform, Crossplane, WSO2, Kong y Apigee. También tengo conocimientos en containerización, orquestación de contenedores y automatización de despliegues. Busco integrarme en equipos donde pueda aprender, crecer y aportar valor desde el primer día."
+    },
+    "experience": {
+      "title": "ls -la experience/",
+      "items": [
+        {
+          "title": "Automatización de despliegues multi-lenguaje en Kubernetes",
+          "command": "$ gitlab-ci pipeline deploy --multi-lang",
+          "description": "Mediante pipelines de CI/CD de GitLab, implementé un sistema automatizado de despliegue de proyectos sobre Kubernetes. Desde un frontend, los usuarios subían código en múltiples lenguajes (Java, React, Python, Node.js, Vue, .NET, entre otros) y el pipeline ejecutaba automáticamente: análisis de seguridad y vulnerabilidades, containerización de la aplicación, despliegue en cluster de Kubernetes, creación de Ingress y registro de subdominio en Cloudflare. Sistema diseñado para desplegar code challenges en una plataforma dedicada a evaluaciones técnicas.",
+          "company": "📍 Empresa: Waimatech"
+        },
+        {
+          "title": "Creación de Infraestructura desde cero para fintech",
+          "command": "$ terraform apply -var-file=\"fintech-prod.tfvars\"",
+          "description": "Utilizando Terraform, desplegué desde cero una infraestructura completa en Azure para un sistema de gestión de financieras online. El proyecto incluyó: clusters de Kubernetes, servidores de bases de datos, bastions, servidores FTP, blob storages, despliegue y configuración de WSO2 API Manager, pipelines en GitLab para despliegue de APIs, configuración de monitorización (Prometheus, Loki, Pingdom) y servicio de mailing con Amazon SES. Infraestructura productiva completa y escalable para operaciones financieras.",
+          "company": "📍 Empresa: CloudAPPi"
+        },
+        {
+          "title": "Sistema de monitorización multi-tenant centralizado",
+          "command": "$ grafana-stack deploy --multi-tenant",
+          "description": "Diseñé e implementé un sistema de monitorización centralizado multi-tenant capaz de recibir telemetría de múltiples fuentes y clientes de forma aislada y segura. Utilizando Mimir para métricas, Loki para logs, Alloy como agente de recolección y Grafana como interfaz de visualización, logré consolidar la observabilidad de diferentes datasources incluyendo: clusters de Kubernetes, máquinas virtuales, bases de datos, API managers y aplicaciones distribuidas. Sistema escalable con segregación de datos por tenant, dashboards personalizados y alerting automatizado.",
+          "company": "📍 Empresa: CloudAPPi"
+        },
+        {
+          "title": "Soporte de infraestructura con Crossplane",
+          "command": "$ kubectl apply -f crossplane-compositions/",
+          "description": "Trabajé sobre infraestructura en Azure para una multinacional que utiliza Crossplane para el despliegue y gestión de recursos cloud. Gestioné plantillas de Crossplane desarrolladas en Rust y manifiestos GitOps en YAML, asegurando el correcto funcionamiento de la infraestructura declarativa y los flujos de aprovisionamiento automatizado. Experiencia práctica con control plane de Kubernetes y gestión de infraestructura multi-cloud.",
+          "company": "📍 Empresa: CloudAPPi"
+        }
+      ]
+    },
+    "skills": {
+      "title": "cat skills.json",
+      "categories": [
+        {
+          "title": "Habilidades Técnicas",
+          "items": [
+            "Automatización de procesos",
+            "Scripting (Bash, Python, Rust)",
+            "Gestión de configuraciones",
+            "Monitoring y logging",
+            "Troubleshooting"
+          ]
+        },
+        {
+          "title": "Habilidades Blandas",
+          "items": [
+            "Trabajo en equipo",
+            "Comunicación efectiva",
+            "Resolución de problemas",
+            "Aprendizaje continuo",
+            "Gestión del tiempo"
+          ]
+        },
+        {
+          "title": "Metodologías",
+          "items": [
+            "Agile / Scrum",
+            "DevOps Culture",
+            "GitFlow",
+            "Infrastructure as Code",
+            "GitOps"
+          ]
+        },
+        {
+          "title": "Idiomas",
+          "items": [
+            "Español (Nativo)",
+            "Inglés (B1)"
+          ]
+        }
+      ]
+    },
+    "technologies": {
+      "title": "docker ps -a --format \"table {{.Names}}\"",
+      "categories": [
+        {
+          "title": "Contenedores & Orquestación",
+          "items": [
+            "Docker",
+            "Docker Compose",
+            "Kubernetes",
+            "OpenShift",
+            "Helm"
+          ]
+        },
+        {
+          "title": "CI/CD",
+          "items": [
+            "GitHub Actions",
+            "GitLab CI",
+            "Azure Pipelines",
+            "Jenkins",
+            "ArgoCD",
+            "n8n"
+          ]
+        },
+        {
+          "title": "Cloud & IaC",
+          "items": [
+            "AWS",
+            "Azure",
+            "GCP",
+            "OVH",
+            "Terraform",
+            "Crossplane"
+          ]
+        },
+        {
+          "title": "Monitoring & Logging",
+          "items": [
+            "Prometheus",
+            "Grafana",
+            "Mimir",
+            "Loki",
+            "Alloy",
+            "BlackBox Exporter"
+          ]
+        },
+        {
+          "title": "Control de Versiones",
+          "items": [
+            "Git",
+            "GitHub",
+            "GitLab",
+            "Azure DevOps"
+          ]
+        },
+        {
+          "title": "Scripting & Lenguajes",
+          "items": [
+            "Bash",
+            "Python",
+            "Rust",
+            "YAML",
+            "JSON"
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "title": "./connect.sh --social",
+      "subtitle": "Encuéntrame en las siguientes plataformas:"
+    },
+    "footer": {
+      "text": "Desarrollado por Jose Miguel Izarra | HTML - CSS - JS | Trabajo remoto e híbrido"
+    }
+  },
+  "en": {
+    "subtitle": "DevOps | Automation & Infrastructure as Code",
+    "nav": {
+      "about": "./about.sh",
+      "experience": "./experience.sh",
+      "skills": "./skills.sh",
+      "technologies": "./tech-stack.sh",
+      "contact": "./contact.sh"
+    },
+    "about": {
+      "title": "cat about.txt",
+      "p1": "I am a DevOps passionate about automation, continuous improvement, and collaborative culture. My goal is to build efficient CI/CD pipelines, optimize infrastructures, and facilitate the delivery of high-quality software in an agile and reliable way.",
+      "p2": "I specialize in infrastructure as code and API Managers, with experience in tools such as Terraform, Crossplane, WSO2, Kong, and Apigee. I also have knowledge in containerization, container orchestration, and deployment automation. I seek to integrate into teams where I can learn, grow, and add value from day one."
+    },
+    "experience": {
+      "title": "ls -la experience/",
+      "items": [
+        {
+          "title": "Multi-language deployment automation on Kubernetes",
+          "command": "$ gitlab-ci pipeline deploy --multi-lang",
+          "description": "Through GitLab CI/CD pipelines, I implemented an automated project deployment system on Kubernetes. From a frontend, users uploaded code in multiple languages (Java, React, Python, Node.js, Vue, .NET, among others) and the pipeline automatically executed: security and vulnerability analysis, application containerization, deployment to Kubernetes cluster, Ingress creation, and subdomain registration on Cloudflare. System designed to deploy code challenges on a platform dedicated to technical evaluations.",
+          "company": "📍 Company: Waimatech"
+        },
+        {
+          "title": "Infrastructure creation from scratch for fintech",
+          "command": "$ terraform apply -var-file=\"fintech-prod.tfvars\"",
+          "description": "Using Terraform, I deployed a complete infrastructure from scratch on Azure for an online financial management system. The project included: Kubernetes clusters, database servers, bastions, FTP servers, blob storage, deployment and configuration of WSO2 API Manager, GitLab pipelines for API deployment, monitoring setup (Prometheus, Loki, Pingdom), and mailing service with Amazon SES. Complete and scalable production infrastructure for financial operations.",
+          "company": "📍 Company: CloudAPPi"
+        },
+        {
+          "title": "Centralized multi-tenant monitoring system",
+          "command": "$ grafana-stack deploy --multi-tenant",
+          "description": "I designed and implemented a centralized multi-tenant monitoring system capable of receiving telemetry from multiple sources and clients in an isolated and secure way. Using Mimir for metrics, Loki for logs, Alloy as a collection agent, and Grafana as a visualization interface, I managed to consolidate observability from different datasources including: Kubernetes clusters, virtual machines, databases, API managers, and distributed applications. Scalable system with tenant data segregation, customized dashboards, and automated alerting.",
+          "company": "📍 Company: CloudAPPi"
+        },
+        {
+          "title": "Infrastructure support with Crossplane",
+          "command": "$ kubectl apply -f crossplane-compositions/",
+          "description": "I worked on Azure infrastructure for a multinational that uses Crossplane for cloud resource deployment and management. I managed Crossplane templates developed in Rust and GitOps manifests in YAML, ensuring the proper functioning of declarative infrastructure and automated provisioning flows. Hands-on experience with Kubernetes control plane and multi-cloud infrastructure management.",
+          "company": "📍 Company: CloudAPPi"
+        }
+      ]
+    },
+    "skills": {
+      "title": "cat skills.json",
+      "categories": [
+        {
+          "title": "Technical Skills",
+          "items": [
+            "Process automation",
+            "Scripting (Bash, Python, Rust)",
+            "Configuration management",
+            "Monitoring and logging",
+            "Troubleshooting"
+          ]
+        },
+        {
+          "title": "Soft Skills",
+          "items": [
+            "Teamwork",
+            "Effective communication",
+            "Problem solving",
+            "Continuous learning",
+            "Time management"
+          ]
+        },
+        {
+          "title": "Methodologies",
+          "items": [
+            "Agile / Scrum",
+            "DevOps Culture",
+            "GitFlow",
+            "Infrastructure as Code",
+            "GitOps"
+          ]
+        },
+        {
+          "title": "Languages",
+          "items": [
+            "Spanish (Native)",
+            "English (B1)"
+          ]
+        }
+      ]
+    },
+    "technologies": {
+      "title": "docker ps -a --format \"table {{.Names}}\"",
+      "categories": [
+        {
+          "title": "Containers & Orchestration",
+          "items": [
+            "Docker",
+            "Docker Compose",
+            "Kubernetes",
+            "OpenShift",
+            "Helm"
+          ]
+        },
+        {
+          "title": "CI/CD",
+          "items": [
+            "GitHub Actions",
+            "GitLab CI",
+            "Azure Pipelines",
+            "Jenkins",
+            "ArgoCD",
+            "n8n"
+          ]
+        },
+        {
+          "title": "Cloud & IaC",
+          "items": [
+            "AWS",
+            "Azure",
+            "GCP",
+            "OVH",
+            "Terraform",
+            "Crossplane"
+          ]
+        },
+        {
+          "title": "Monitoring & Logging",
+          "items": [
+            "Prometheus",
+            "Grafana",
+            "Mimir",
+            "Loki",
+            "Alloy",
+            "BlackBox Exporter"
+          ]
+        },
+        {
+          "title": "Version Control",
+          "items": [
+            "Git",
+            "GitHub",
+            "GitLab",
+            "Azure DevOps"
+          ]
+        },
+        {
+          "title": "Scripting & Languages",
+          "items": [
+            "Bash",
+            "Python",
+            "Rust",
+            "YAML",
+            "JSON"
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "title": "./connect.sh --social",
+      "subtitle": "Find me on the following platforms:"
+    },
+    "footer": {
+      "text": "Developed by Jose Miguel Izarra | HTML - CSS - JS | Remote & Hybrid work"
+    }
+  }
+}

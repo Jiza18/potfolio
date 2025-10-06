@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de DevOps especializado en automatización, CI/CD, contenedores y orquestación. Conocimientos en Docker, Kubernetes, GitHub Actions y más.">
-    <meta name="keywords" content="DevOps, Docker, Kubernetes, CI/CD, GitHub Actions, automatización, infraestructura, cloud, portfolio">
+    <meta name="description" content="DevOps Engineer especializado en Kubernetes, Terraform, CI/CD y monitorización multi-tenant. Experiencia en AWS, Azure, GitLab CI y automatización de infraestructura.">
+    <meta name="keywords" content="DevOps, Kubernetes, Terraform, Docker, CI/CD, GitLab CI, GitHub Actions, Azure, AWS, Crossplane, API Manager, WSO2, Grafana, Prometheus, Loki, Mimir, automatización, infraestructura como código, IaC, observabilidad, multi-tenant, contenedores, orquestación">
     <meta name="author" content="Jose Miguel Izarra">
-    <title>DevOps | Portfolio - Jose Miguel Izarra</title>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jiza.pro/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jiza.pro/">
+    <meta property="og:title" content="Jose Miguel Izarra - DevOps Engineer | Kubernetes & CI/CD">
+    <meta property="og:description" content="DevOps Engineer especializado en automatización, Kubernetes, Terraform y sistemas de monitorización multi-tenant. Experiencia en infraestructura cloud y CI/CD.">
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://jiza.pro/">
+    <meta name="twitter:title" content="Jose Miguel Izarra - DevOps Engineer | Kubernetes & CI/CD">
+    <meta name="twitter:description" content="DevOps Engineer especializado en automatización, Kubernetes, Terraform y sistemas de monitorización multi-tenant.">
+    <meta name="twitter:creator" content="@jiza28">
+    
+    <title>Jose Miguel Izarra - DevOps Engineer | Kubernetes, Terraform & CI/CD</title>
     
     <style>
         /* Variables de colores inspirados en terminal */
@@ -24,7 +41,6 @@
             --shadow: rgba(0, 0, 0, 0.5);
         }
 
-        /* Reset y base */
         * {
             margin: 0;
             padding: 0;
@@ -39,14 +55,63 @@
             overflow-x: hidden;
         }
 
-        /* Contenedor principal */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            position: relative;
         }
 
-        /* Header con efecto de terminal */
+        /* Selector de idioma */
+        .language-selector {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            gap: 8px;
+            background-color: rgba(15, 20, 25, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        .lang-btn {
+            background-color: transparent;
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            transition: all 0.3s ease;
+            font-size: 0.85em;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .flag-icon {
+            width: 18px;
+            height: 12px;
+            display: inline-block;
+            border-radius: 2px;
+        }
+
+        .lang-btn:hover {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+
+        .lang-btn.active {
+            background-color: var(--accent-cyan);
+            color: var(--bg-primary);
+            border-color: var(--accent-cyan);
+        }
+
         header {
             background-color: var(--bg-secondary);
             border: 2px solid var(--border-color);
@@ -118,7 +183,6 @@
             font-size: 1.1em;
         }
 
-        /* Navegación */
         nav {
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -147,7 +211,6 @@
             box-shadow: 0 2px 8px rgba(57, 186, 230, 0.3);
         }
 
-        /* Secciones */
         section {
             background-color: var(--bg-secondary);
             border: 2px solid var(--border-color);
@@ -178,7 +241,7 @@
             margin-bottom: 10px;
         }
 
-        .project-item, .experience-item {
+        .experience-item {
             background-color: var(--bg-card);
             padding: 20px;
             margin-bottom: 15px;
@@ -187,11 +250,11 @@
             transition: transform 0.3s ease;
         }
 
-        .project-item:hover, .experience-item:hover {
+        .experience-item:hover {
             transform: translateX(10px);
         }
 
-        .project-item h3, .experience-item h3 {
+        .experience-item h3 {
             margin-top: 0;
         }
 
@@ -200,7 +263,6 @@
             font-style: italic;
         }
 
-        /* Grid de habilidades */
         .skills-grid, .tech-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -243,7 +305,6 @@
             color: var(--accent-green);
         }
 
-        /* Enlaces sociales */
         .social-links {
             display: flex;
             justify-content: center;
@@ -271,7 +332,6 @@
             box-shadow: 0 4px 12px rgba(57, 186, 230, 0.4);
         }
 
-        /* Footer */
         footer {
             background-color: var(--bg-secondary);
             border-top: 2px solid var(--border-color);
@@ -281,7 +341,6 @@
             margin-top: 30px;
         }
 
-        /* Animaciones de entrada */
         .fade-in {
             animation: fadeIn 0.8s ease-in;
         }
@@ -291,7 +350,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .container {
                 padding: 10px;
@@ -316,8 +374,27 @@
     </style>
 </head>
 <body>
+    <div class="language-selector">
+        <button class="lang-btn active" data-lang="es" title="Español">
+            <svg class="flag-icon" viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+                <rect width="36" height="24" fill="#AA151B"/>
+                <rect y="6" width="36" height="12" fill="#F1BF00"/>
+            </svg>
+            ES
+        </button>
+        <button class="lang-btn" data-lang="en" title="English">
+            <svg class="flag-icon" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+                <rect width="60" height="30" fill="#012169"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+            </svg>
+            EN
+        </button>
+    </div>
+
     <div class="container">
-        <!-- Header -->
         <header class="fade-in">
             <div class="terminal-header">
                 <div class="terminal-buttons">
@@ -330,231 +407,232 @@
             <div class="header-content">
                 <p><span class="prompt">user@devops:~$</span> whoami</p>
                 <h1 class="typing-effect" id="typing-name">Jose Miguel Izarra</h1>
-                <p class="subtitle">DevOps | Automatización & Infraestructura como Código</p>
+                <p class="subtitle" data-i18n="subtitle"></p>
             </div>
         </header>
 
-        <!-- Navegación -->
         <nav class="fade-in">
-            <a href="#about" title="Sobre mí">./about.sh</a>
-            <a href="#experience" title="Experiencia">./experience.sh</a>
-            <a href="#skills" title="Habilidades">./skills.sh</a>
-            <a href="#technologies" title="Tecnologías">./tech-stack.sh</a>
-            <a href="#contact" title="Contacto">./contact.sh</a>
+            <a href="#about" data-i18n="nav.about"></a>
+            <a href="#experience" data-i18n="nav.experience"></a>
+            <a href="#skills" data-i18n="nav.skills"></a>
+            <a href="#technologies" data-i18n="nav.technologies"></a>
+            <a href="#contact" data-i18n="nav.contact"></a>
         </nav>
 
-        <!-- Sección: Sobre mí -->
         <section id="about" class="fade-in">
-            <h2>cat about.txt</h2>
-            <p>
-                Soy un <strong>DevOps</strong> apasionado por la automatización, la mejora continua y la cultura colaborativa. 
-                Mi objetivo es construir pipelines de CI/CD eficientes, optimizar infraestructuras y facilitar la entrega de software 
-                de alta calidad de manera ágil y confiable.
-            </p>
-            <p style="margin-top: 15px;">
-                Me especializo en <strong>infraestructura como código</strong> y <strong>API Managers</strong>, con experiencia en 
-                herramientas como <strong>Terraform</strong>, <strong>Crossplane</strong> y <strong>WSO2</strong>. También tengo conocimientos en containerización, 
-                orquestación de contenedores y automatización de despliegues. Busco integrarme en equipos donde pueda aprender, 
-                crecer y aportar valor desde el primer día.
-            </p>
+            <h2 data-i18n="about.title"></h2>
+            <p data-i18n="about.p1"></p>
+            <p style="margin-top: 15px;" data-i18n="about.p2"></p>
         </section>
 
-        <!-- Sección: Experiencia -->
         <section id="experience" class="fade-in">
-            <h2>ls -la experience/</h2>
-            
-            <div class="experience-item">
-                <h3>Automatización de despliegues multi-lenguaje en Kubernetes</h3>
-                <p class="command-line">$ gitlab-ci pipeline deploy --multi-lang</p>
-                <p>
-                    Mediante pipelines de CI/CD de GitLab, implementé un sistema automatizado de despliegue de proyectos 
-                    sobre Kubernetes. Desde un frontend, los usuarios subían código en múltiples lenguajes (Java, React, 
-                    Python, Node.js, Vue, .NET, entre otros) y el pipeline ejecutaba automáticamente: análisis de seguridad 
-                    y vulnerabilidades, containerización de la aplicación, despliegue en cluster de Kubernetes, creación de 
-                    Ingress y registro de subdominio en Cloudflare. Sistema diseñado para desplegar code challenges en una 
-                    plataforma dedicada a evaluaciones técnicas.
-                </p>
-                <p style="margin-top: 10px; color: var(--text-secondary); font-style: italic;">
-                    📍 Empresa: Waimatech
-                </p>
-            </div>
-
-            <div class="experience-item">
-                <h3>Creación de Infraestructura desde cero para fintech</h3>
-                <p class="command-line">$ terraform apply -var-file="fintech-prod.tfvars"</p>
-                <p>
-                    Utilizando Terraform, desplegué desde cero una infraestructura completa en Azure para un sistema de 
-                    gestión de financieras online. El proyecto incluyó: clusters de Kubernetes, servidores de bases de datos, 
-                    bastions, servidores FTP, blob storages, despliegue y configuración de WSO2 API Manager, pipelines en 
-                    GitLab para despliegue de APIs, configuración de monitorización (Prometheus, Loki, Pingdom) y servicio 
-                    de mailing con Amazon SES. Infraestructura productiva completa y escalable para operaciones financieras.
-                </p>
-                <p style="margin-top: 10px; color: var(--text-secondary); font-style: italic;">
-                    📍 Empresa: CloudAPPi
-                </p>
-            </div>
-
-            <div class="experience-item">
-                <h3>Soporte de infraestructura con crossplane</h3>
-                <p class="command-line">$ kubectl apply -f crossplane-compositions/</p>
-                <p>
-                    Trabajé sobre infraestructura en Azure para una multinacional que utiliza Crossplane para el despliegue 
-                    y gestión de recursos cloud. Gestioné plantillas de Crossplane desarrolladas en Rust y manifiestos GitOps 
-                    en YAML, asegurando el correcto funcionamiento de la infraestructura declarativa y los flujos de 
-                    aprovisionamiento automatizado. Experiencia práctica con control plane de Kubernetes y gestión de 
-                    infraestructura multi-cloud.
-                </p>
-                <p style="margin-top: 10px; color: var(--text-secondary); font-style: italic;">
-                    📍 Empresa: CloudAPPi
-                </p>
-            </div>
+            <h2 data-i18n="experience.title"></h2>
+            <div id="experience-container"></div>
         </section>
 
-        <!-- Sección: Habilidades -->
         <section id="skills" class="fade-in">
-            <h2>cat skills.json</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Habilidades Técnicas</h3>
-                    <ul>
-                        <li>Automatización de procesos</li>
-                        <li>Scripting (Bash, Python, Rust)</li>
-                        <li>Gestión de configuraciones</li>
-                        <li>Monitoring y logging</li>
-                        <li>Troubleshooting</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Habilidades Blandas</h3>
-                    <ul>
-                        <li>Trabajo en equipo</li>
-                        <li>Comunicación efectiva</li>
-                        <li>Resolución de problemas</li>
-                        <li>Aprendizaje continuo</li>
-                        <li>Gestión del tiempo</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Metodologías</h3>
-                    <ul>
-                        <li>Agile / Scrum</li>
-                        <li>DevOps Culture</li>
-                        <li>GitFlow</li>
-                        <li>12 Factor Apps</li>
-                        <li>Infrastructure as Code</li>
-                        <li>GitOps</li>
-                    </ul>
-                </div>
-            </div>
+            <h2 data-i18n="skills.title"></h2>
+            <div class="skills-grid" id="skills-container"></div>
         </section>
 
-        <!-- Sección: Tecnologías -->
         <section id="technologies" class="fade-in">
-            <h2>docker ps -a --format "table {{.Names}}"</h2>
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <h3>Contenedores & Orquestación</h3>
-                    <ul>
-                        <li>Docker</li>
-                        <li>Docker Compose</li>
-                        <li>Kubernetes</li>
-                        <li>OpenShift</li>
-                        <li>Helm</li>
-                    </ul>
-                </div>
-
-                <div class="tech-item">
-                    <h3>CI/CD</h3>
-                    <ul>
-                        <li>GitHub Actions</li>
-                        <li>GitLab CI</li>
-                        <li>Azure Pipelines</li>
-                        <li>Jenkins</li>
-                        <li>ArgoCD</li>
-                        <li>n8n</li>
-                    </ul>
-                </div>
-
-                <div class="tech-item">
-                    <h3>Cloud & IaC</h3>
-                    <ul>
-                        <li>AWS</li>
-                        <li>Azure</li>
-                        <li>GCP</li>
-                        <li>OVH</li>
-                        <li>Terraform</li>
-                        <li>Crossplane</li>
-                    </ul>
-                </div>
-
-                <div class="tech-item">
-                    <h3>Monitoring & Logging</h3>
-                    <ul>
-                        <li>Prometheus</li>
-                        <li>Grafana</li>
-                        <li>Mimir</li>
-                        <li>Loki</li>
-                        <li>Alloy</li>
-                        <li>BlackBox Exporter</li>
-                    </ul>
-                </div>
-
-                <div class="tech-item">
-                    <h3>Control de Versiones</h3>
-                    <ul>
-                        <li>Git</li>
-                        <li>GitHub</li>
-                        <li>GitLab</li>
-                        <li>Azure DevOps</li>
-                    </ul>
-                </div>
-
-                <div class="tech-item">
-                    <h3>Scripting & Lenguajes</h3>
-                    <ul>
-                        <li>Bash</li>
-                        <li>Python</li>
-                        <li>YAML</li>
-                        <li>JSON</li>
-                    </ul>
-                </div>
-            </div>
+            <h2 data-i18n="technologies.title"></h2>
+            <div class="tech-grid" id="tech-container"></div>
         </section>
 
-        <!-- Sección: Contacto -->
         <section id="contact" class="fade-in">
-            <h2>./connect.sh --social</h2>
-            <p style="text-align: center; margin-bottom: 30px; color: var(--text-secondary);">
-                Encuéntrame en las siguientes plataformas:
-            </p>
+            <h2 data-i18n="contact.title"></h2>
+            <p style="text-align: center; margin-bottom: 30px; color: var(--text-secondary);" data-i18n="contact.subtitle"></p>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/jose-miguel-izarra-81054b299/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
-                    <span>🔗</span> LinkedIn
+                <a href="https://www.linkedin.com/in/jose-miguel-izarra-81054b299/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                    <span role="img" aria-label="Icono LinkedIn">🔗</span> LinkedIn
                 </a>
-                <a href="https://github.com/jiza18" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
-                    <span>💻</span> GitHub
+                <a href="https://github.com/jiza18" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                    <span role="img" aria-label="Icono GitHub">💻</span> GitHub
                 </a>
-                <a href="mailto:jiza.develop@gmail.com" class="social-link" title="Email">
-                    <span>✉️</span> Email
+                <a href="mailto:jiza.develop@gmail.com" class="social-link" aria-label="Email">
+                    <span role="img" aria-label="Icono Email">✉️</span> Email
                 </a>
-                <a href="https://x.com/jiza28" target="_blank" rel="noopener noreferrer" class="social-link" title="Twitter">
-                    <span>🐦</span> Twitter
+                <a href="https://x.com/jiza28" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+                    <span role="img" aria-label="Icono Twitter">🐦</span> Twitter
                 </a>
             </div>
         </section>
 
-        <!-- Footer -->
         <footer>
-            <p><span class="prompt">~$</span> Desarrollado por Jose Miguel Izarra | HTML - CSS - JS | Trabajo remoto e híbrido</p>
+            <p><span class="prompt">~$</span> <span data-i18n="footer.text"></span></p>
             <p style="margin-top: 10px; font-size: 0.9em;">DevOps Portfolio</p>
         </footer>
     </div>
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jose Miguel Izarra",
+        "jobTitle": "DevOps Engineer",
+        "url": "https://jiza.pro",
+        "sameAs": [
+            "https://www.linkedin.com/in/jose-miguel-izarra-81054b299/",
+            "https://github.com/jiza18",
+            "https://x.com/jiza28"
+        ],
+        "knowsAbout": [
+            "DevOps",
+            "Kubernetes",
+            "Docker",
+            "Terraform",
+            "CI/CD",
+            "GitLab CI",
+            "GitHub Actions",
+            "Infrastructure as Code",
+            "Cloud Computing",
+            "Azure",
+            "AWS",
+            "Monitoring",
+            "Grafana",
+            "Prometheus",
+            "API Management"
+        ],
+        "description": "DevOps Engineer especializado en automatización, Kubernetes, Terraform, CI/CD y sistemas de monitorización multi-tenant",
+        "email": "jiza.develop@gmail.com",
+        "alumniOf": {
+            "@type": "Organization",
+            "name": "DevOps Professional"
+        }
+    }
+    </script>
+
     <script>
-        // Efecto de typing para el nombre
+        let translations = {};
+        let currentLang = 'es';
+
+        // Cargar traducciones desde el archivo JSON
+        async function loadTranslations() {
+            try {
+                const response = await fetch('translations.json');
+                translations = await response.json();
+                changeLanguage(currentLang);
+            } catch (error) {
+                console.error('Error loading translations:', error);
+            }
+        }
+
+        // Cambiar idioma
+        function changeLanguage(lang) {
+            currentLang = lang;
+            
+            // Actualizar botones activos
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Actualizar el atributo lang del HTML
+            document.documentElement.lang = lang;
+
+            // Actualizar textos simples
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const keys = key.split('.');
+                let value = translations[lang];
+                
+                for (const k of keys) {
+                    value = value[k];
+                }
+                
+                element.textContent = value;
+            });
+
+            // Actualizar experiencia
+            renderExperience(lang);
+
+            // Actualizar habilidades
+            renderSkills(lang);
+
+            // Actualizar tecnologías
+            renderTechnologies(lang);
+        }
+
+        // Renderizar experiencia
+        function renderExperience(lang) {
+            const container = document.getElementById('experience-container');
+            container.innerHTML = '';
+            
+            translations[lang].experience.items.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'experience-item';
+                div.innerHTML = `
+                    <h3>${item.title}</h3>
+                    <p class="command-line">${item.command}</p>
+                    <p>${item.description}</p>
+                    <p style="margin-top: 10px; color: var(--text-secondary); font-style: italic;">
+                        ${item.company}
+                    </p>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        // Renderizar habilidades
+        function renderSkills(lang) {
+            const container = document.getElementById('skills-container');
+            container.innerHTML = '';
+            
+            translations[lang].skills.categories.forEach(category => {
+                const div = document.createElement('div');
+                div.className = 'skill-category';
+                
+                const ul = document.createElement('ul');
+                category.items.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    ul.appendChild(li);
+                });
+                
+                div.innerHTML = `<h3>${category.title}</h3>`;
+                div.appendChild(ul);
+                container.appendChild(div);
+            });
+        }
+
+        // Renderizar tecnologías
+        function renderTechnologies(lang) {
+            const container = document.getElementById('tech-container');
+            container.innerHTML = '';
+            
+            translations[lang].technologies.categories.forEach(category => {
+                const div = document.createElement('div');
+                div.className = 'tech-item';
+                
+                const ul = document.createElement('ul');
+                category.items.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    ul.appendChild(li);
+                });
+                
+                div.innerHTML = `<h3>${category.title}</h3>`;
+                div.appendChild(ul);
+                container.appendChild(div);
+            });
+        }
+
+        // Event listeners
         document.addEventListener('DOMContentLoaded', function() {
+            // Cargar traducciones
+            loadTranslations();
+
+            // Botones de idioma
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    changeLanguage(this.dataset.lang);
+                });
+            });
+
+            // Efecto de typing para el nombre
             const typingElement = document.getElementById('typing-name');
             const text = typingElement.textContent;
             typingElement.textContent = '';
@@ -566,7 +644,6 @@
                     i++;
                     setTimeout(typeWriter, 100);
                 } else {
-                    // Mantener el cursor parpadeando
                     typingElement.style.borderRight = '3px solid var(--accent-green)';
                 }
             }
@@ -612,14 +689,16 @@
             });
 
             // Efecto hover en items de experiencia
-            document.querySelectorAll('.experience-item, .project-item').forEach(item => {
-                item.addEventListener('mouseenter', function() {
-                    this.style.backgroundColor = 'rgba(13, 188, 121, 0.05)';
-                });
-                
-                item.addEventListener('mouseleave', function() {
-                    this.style.backgroundColor = 'var(--bg-card)';
-                });
+            document.addEventListener('mouseover', function(e) {
+                if (e.target.closest('.experience-item')) {
+                    e.target.closest('.experience-item').style.backgroundColor = 'rgba(13, 188, 121, 0.05)';
+                }
+            });
+            
+            document.addEventListener('mouseout', function(e) {
+                if (e.target.closest('.experience-item')) {
+                    e.target.closest('.experience-item').style.backgroundColor = 'var(--bg-card)';
+                }
             });
         });
     </script>
